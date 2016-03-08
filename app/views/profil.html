@@ -1,0 +1,132 @@
+<div id="profil">
+	<div id="profil_img" class = "circular"></div>
+	<md-content>
+     	<md-tabs md-dynamic-height md-border-bottom>
+	        <md-tab label="Informations">
+	          	<md-content class="md-padding">
+					<div ng-controller="EditCtrl" layout="column" id = "informations">
+						<div layout = "row">
+							<md-button class="md-icon-button logo"  ng-click="editInput($event)">
+							  	<img class="logo-image" src="app/images/icons/tooltip-edit.png">
+							</md-button>
+							<div layout=column>
+								<h3>Nom Prénom</h3>
+								<p> {{user.nom}} {{user.prenom}}</p>
+							</div>
+						</div>
+
+						<div layout = "row">
+							<md-button class="md-icon-button logo">
+							  	<img class="logo-image" src="app/images/icons/tooltip-edit.png">
+							</md-button>
+							<div layout=column>
+								<h3>Mail</h3>
+								<p> {{user.email}}</p>
+							</div>
+						</div>
+
+						<div layout = "row">
+							<md-button class="md-icon-button logo">
+							  	<img class="logo-image" src="app/images/icons/tooltip-edit.png">
+							</md-button>
+							<div layout=column>
+								<h3>Adresse</h3>
+								<p>{{user.adresse}}</p>
+							</div>
+						</div>
+
+						<div layout = "row">
+							<md-button class="md-icon-button logo">
+							  	<img class="logo-image" src="app/images/icons/tooltip-edit.png">
+							</md-button>
+							<div layout=column>
+								<h3>Téléphone</h3>
+								<p> {{user.tel}}</p>
+							</div>
+						</div>
+
+						<div layout = "row">
+							<md-button class="md-icon-button logo">
+							  	<img class="logo-image" src="app/images/icons/tooltip-edit.png">
+							</md-button>
+							<div layout=column>
+								<h3>Disponibilité</h3>
+								<p> {{user.dispo}}</p>
+							</div>
+						</div>
+					</div>
+				</md-content>
+			</md-tab>
+
+			<md-tab label="Compétences">
+	          	<md-content class="md-padding">
+					<div layout="column" id = "competences">
+						<div ng-controller="ProfilCtrl as ctrl" layout="column" ng-cloak>
+							<md-content class="md-padding" layout="column">
+							    <div display="row">
+							    	<h2 display="column"flex="25" class="md-title">Spécialisation</h2>
+							    	<div display="column"flex="50">
+							    		<md-chips flex = ""
+									      	ng-model="ctrl.spe"
+										    md-separator-keys="ctrl.keys"
+										    placeholder="Entrer un spécialisation"></md-chips>
+										</div>
+							    </div>
+							</md-content>
+							</div>
+
+							<div ng-controller="ProfilCtrl as ctrl" layout="column" ng-cloak>
+							<md-content class="md-padding" layout="column">
+								<div display="row">
+								    <h2 display="column"flex="25" class="md-title"> Compétences</h2>
+								    <div display="column"flex="50">
+									    <md-chips
+									      	ng-model="ctrl.comp"
+										    md-separator-keys="ctrl.keys"
+										    placeholder="Entrer une compétence">
+										</md-chips>
+									</div>
+								</div>
+							</md-content>
+							</div>
+					</div>
+				</md-content>
+			</md-tab>
+			<md-tab label="Autres">
+	          	<md-content class="md-padding">
+					<div layout="column" id = "autres">
+						<div ng-controller="ProfilCtrl as ctrl" layout="column" ng-cloak>
+							<md-content class="md-padding" layout="column">
+								<div>
+									<h2 display="column"flex="25" class="md-title">Description</h2>
+									<span class="description">
+										Pour faire un secret faut être deux <br>
+										Pour faire un te-traî j'peux être seul <br>
+										J'suis dans l'middle, comme Arsi, comme Middleton <br>
+										Elle sera dans de beaux draps sous ma cou-e-tte <br>
+										Don Pé', Ruinart, Moët<br>
+										J'prends la palette, son cul j'fouette<br>
+										On a grandi te-tê dans l'étau<br>
+										Bois à la teteille mon foie dans les toiletteuh.
+									</span>
+								</div>
+							    <div display="row">
+							    	<h2 display="column"flex="25" class="md-title">Intérêts</h2>
+							    	<div display="column"flex="50">
+							    		<md-chips flex = ""
+									      	ng-model="ctrl.int"
+										    md-separator-keys="ctrl.keys"
+										    placeholder="Entrer une passion"></md-chips>
+										</div>
+							    </div>
+							</md-content>
+							</div>
+					</div>
+				</md-content>
+			</md-tab>
+
+		</md-tabs>
+	</md-content>
+
+</div>
+

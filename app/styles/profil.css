@@ -1,0 +1,13 @@
+#profil_img{
+	background: url(../images/double_fuck.jpg) no-repeat;
+	height: 200px;
+	width:200px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto ;
+    background-size: 200px 200px;
+	border-radius: 150px;
+	-webkit-border-radius: 150px;
+	-moz-border-radius: 150px;
+	
+}
